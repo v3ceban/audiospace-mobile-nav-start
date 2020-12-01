@@ -1,31 +1,47 @@
 /********* CSS RESETS **********/
 
 img {
-	max-width:100%;
+	max-width: 100%;
 }
 
-h1, h2, h3, p, ul, ol {
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
 	margin: 0;
 	padding: 0;
+}
+
+nav ul,
+nav ol {
+	list-style: none;
 }
 
 /********* End CSS Reset *********/
 
 body {
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-weight:300;
-	color:#ebebeb;
+	font-family: "Open Sans Condensed", sans-serif;
+	font-weight: 300;
+	color: #ebebeb;
 }
 
 header {
-	padding:0 15px 20px 15px;
+	padding: 0 15px 20px 15px;
 }
 
-section{ padding: 30px 15px; }
+section {
+	padding: 30px 15px;
+}
 
-#new-release { background:#ebebeb; }
+#new-release {
+	background: #ebebeb;
+}
 
-#coming-soon { background:#85a0ad; }
+#coming-soon {
+	background: #85a0ad;
+}
 
 .grid {
 	padding: 15px 0;
@@ -35,29 +51,39 @@ section{ padding: 30px 15px; }
 }
 
 /******* Top section styles *******/
-#top { padding: 0; }
+#top {
+	padding: 0;
+}
 
-#top { display: flex; }
+#top {
+	display: flex;
+}
 
-#top article { padding: 15px; }
+#top article {
+	padding: 15px;
+}
 
-#top article:first-of-type { background:#85a0ad; }
+#top article:first-of-type {
+	background: #85a0ad;
+}
 
-#top article:last-of-type { background:#793f04; }
+#top article:last-of-type {
+	background: #793f04;
+}
 
 /********** Footer Rules **********/
 footer {
 	display: flex;
-	background:#793f04;
-	padding:15px;
+	background: #793f04;
+	padding: 15px;
 }
 
 footer section {
-	flex:1;
+	flex: 1;
 	padding: 15px 0;
 }
 
-footer section:last-of-type{
+footer section:last-of-type {
 	padding-left: 5px;
 	padding-top: 30px;
 }
@@ -65,28 +91,32 @@ footer section:last-of-type{
 /********** Typography Rules **********/
 
 h1 {
-	text-transform:uppercase;
-	font-weight:700;
+	text-transform: uppercase;
+	font-weight: 700;
 }
 
 h2 {
-	font-size:36px;
-	text-transform:uppercase;
-	font-weight:700;
+	font-size: 36px;
+	text-transform: uppercase;
+	font-weight: 700;
 }
 
-p { line-height: 1.3em; }
+p {
+	line-height: 1.3em;
+}
 
-#new-release h2 { color:#303030; }
+#new-release h2 {
+	color: #303030;
+}
 
 /************ Logo Styles ***************/
-header h1 { 
+header h1 {
 	font-size: 20vw;
 	text-align: center;
-	letter-spacing:-4px;
+	letter-spacing: -4px;
 }
 
-header h2 { 
+header h2 {
 	color: #303030;
 }
 
@@ -94,29 +124,43 @@ header div:last-of-type {
 	text-align: center;
 }
 
-footer h1 { font-size: 10vw; }
+footer h1 {
+	font-size: 10vw;
+}
 
-footer h2 { font-size: 24px; }
+footer h2 {
+	font-size: 24px;
+}
 
-.audio { color:#f69331; }
+.audio {
+	color: #f69331;
+}
 
-.space { color:#40606f; }
+.space {
+	color: #40606f;
+}
 
-footer .space { color:#bdd4de; }
+footer .space {
+	color: #bdd4de;
+}
 
 /************ Card Flip Styles **************/
 
-.flip-container { perspective: 1000px; }
-	
+.flip-container {
+	perspective: 1000px;
+}
+
 .flip-container.hover .back {
 	transform: rotateY(0deg);
 }
 
 .flip-container.hover .front {
-    transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
-.flip-container, .front, .back {
+.flip-container,
+.front,
+.back {
 	width: 100%;
 }
 
@@ -126,10 +170,11 @@ footer .space { color:#bdd4de; }
 
 	position: relative;
 	height: 0;
-	padding-top:100%;
+	padding-top: 100%;
 }
 
-.front, .back {
+.front,
+.back {
 	-webkit-backface-visibility: hidden; /*still needed for safari & android*/
 	backface-visibility: hidden;
 	transition: 0.6s;
@@ -141,79 +186,80 @@ footer .space { color:#bdd4de; }
 	height: 100%;
 }
 
-.front { transform: rotateY(0deg); z-index: 2; }
+.front {
+	transform: rotateY(0deg);
+	z-index: 2;
+}
 
 .back {
 	transform: rotateY(-180deg);
-	background:#f69331;
-	padding:10px;
+	background: #f69331;
+	padding: 10px;
 	box-sizing: border-box;
 }
 
 .front img {
-	display:block;
+	display: block;
 }
 
 .title {
-	text-transform:uppercase;
-	font-size:14px;
+	text-transform: uppercase;
+	font-size: 14px;
 }
 
 .name {
-	margin-bottom:10px;
-	font-weight:700;
-	color:#40606f;
+	margin-bottom: 10px;
+	font-weight: 700;
+	color: #40606f;
 }
 
 /************ Responsive Media Queries ***************/
 
 @media only screen and (min-width: 600px) {
-	
-	.grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
-	
-	header{
+	.grid {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	header {
 		display: flex;
 		padding-bottom: 0;
 	}
 
 	header div {
 		flex: 1;
-		padding:15px;
+		padding: 15px;
 	}
-	
+
 	header h1 {
 		font-size: 10vw;
 	}
-	
+
 	header h2 {
 		font-size: 3.6vw;
 	}
-	
+
 	header img {
 		width: 100%;
 	}
-	
-	#top p, footer p {
+
+	#top p,
+	footer p {
 		font-size: 24px;
 	}
-	
 }
 
 @media only screen and (min-width: 960px) {
-	
 	#page {
-		width:960px;
-		margin:auto;
+		width: 960px;
+		margin: auto;
 	}
-	
-	header h1, footer h1 {
-		font-size:100px;
+
+	header h1,
+	footer h1 {
+		font-size: 100px;
 	}
-	
+
 	header h2 {
 		font-size: 36px;
 	}
 }
-
-
-
